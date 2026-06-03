@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name": "Music Night",
+    "category": "Music",
+    "date": "2026-07-15",
+    "location": "City Open Air Stage, Coimbatore",
+    "seats": 45,
+    "price": 15
+  },
+  {
+    "id": 2,
+    "name": "Art Exhibition",
+    "category": "Art",
+    "date": "2026-07-22",
+    "location": "Town Hall Gallery, Coimbatore",
+    "seats": 12,
+    "price": 5
+  },
+  {
+    "id": 3,
+    "name": "Sports Day",
+    "category": "Sports",
+    "date": "2026-08-05",
+    "location": "District Sports Ground, Coimbatore",
+    "seats": 150,
+    "price": 20
+  },
+  {
+    "id": 4,
+    "name": "Coding Workshop",
+    "category": "Education",
+    "date": "2026-08-12",
+    "location": "Public Library Hall, Coimbatore",
+    "seats": 25,
+    "price": 0
+  },
+  {
+    "id": 5,
+    "name": "Food Festival",
+    "category": "Food",
+    "date": "2026-08-20",
+    "location": "Market Street, Coimbatore",
+    "seats": 300,
+    "price": 0
+  },
+  {
+    "id": 6,
+    "name": "Yoga Camp",
+    "category": "Health",
+    "date": "2026-08-28",
+    "location": "Nehru Park, Coimbatore",
+    "seats": 80,
+    "price": 25
+  }
+]

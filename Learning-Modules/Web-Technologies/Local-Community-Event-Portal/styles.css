@@ -1,0 +1,493 @@
+/* ============================================================
+   styles.css — Community Event Portal
+   CSS3 Exercises 1-11 satisfied
+   ============================================================ */
+
+
+/* CSS Exercise 3: Universal selector reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* CSS Exercise 4 & 5: Body background, font */
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background: #f2f5f2;
+  color: #222;
+  line-height: 1.6;
+}
+
+
+/* ============================================================
+   Header
+   ============================================================ */
+
+header {
+  background: #198754;
+  color: white;
+  padding: 14px 20px;
+}
+
+/* CSS Exercise 3: ID selector #mainHeader */
+#mainHeader {
+  text-align: center;
+  /* CSS Exercise 5: font properties */
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+/* CSS Exercise 6: remove bullets from nav */
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+nav ul li {
+  padding: 0 4px;
+}
+
+/* CSS Exercise 6: link pseudo-classes */
+nav a:link    { color: white; text-decoration: none; }
+nav a:visited { color: #d4edda; }
+nav a:hover   { color: yellow; text-decoration: underline; }
+nav a:active  { color: #ffc107; }
+
+
+/* ============================================================
+   Sections
+   CSS Exercise 3: element selector
+   ============================================================ */
+
+section {
+  padding: 28px 24px;
+}
+
+/* CSS Exercise 3: element selector all h2 */
+h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #198754;
+  border-bottom: 3px solid #198754;
+  padding-bottom: 6px;
+  margin-bottom: 18px;
+}
+
+/* CSS Exercise 3: Grouping selector h3 and p together */
+h3, p {
+  margin-bottom: 8px;
+}
+
+
+/* ============================================================
+   Events section
+   ============================================================ */
+
+.filter-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+
+.filter-row label {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.filter-row select {
+  padding: 7px 12px;
+  border: 1px solid #c3e6cb;
+  border-radius: 5px;
+  font-size: 14px;
+  font-family: 'Poppins', Arial, sans-serif;
+  background: white;
+}
+
+#eventContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* CSS Exercise 3: class selector .eventCard */
+/* CSS Exercise 8: padding, border, margin */
+.eventCard {
+  background: white;
+  padding: 16px;
+  border: 1px solid #c3e6cb;
+  border-radius: 10px;
+  width: 240px;
+  margin: 4px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.eventCard h3 {
+  color: #198754;
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.eventCard p {
+  font-size: 13px;
+  color: #555;
+}
+
+.eventCard button {
+  margin-top: 10px;
+  background: #198754;
+  color: white;
+  border: none;
+  padding: 7px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 13px;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
+.eventCard button:hover   { background: #157347; }
+.eventCard button:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
+
+
+/* ============================================================
+   Gallery Table
+   CSS Exercise 7: border, padding, background, nth-child,
+                   border-collapse, text-align
+   ============================================================ */
+
+.gallery-table {
+  margin: 0 auto;
+  /* CSS Exercise 7: border-collapse */
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 700px;
+}
+
+.gallery-table caption {
+  font-style: italic;
+  color: #666;
+  margin-bottom: 10px;
+  font-size: 14px;
+  caption-side: bottom;
+  padding-top: 8px;
+}
+
+/* CSS Exercise 7: th styling */
+.gallery-table th {
+  background: #198754;
+  color: white;
+  /* CSS Exercise 7: padding */
+  padding: 10px 14px;
+  /* CSS Exercise 7: text-align */
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid #157347;
+}
+
+/* CSS Exercise 7: td styling */
+.gallery-table td {
+  padding: 10px;
+  border: 1px solid #c3e6cb;
+  /* CSS Exercise 4: RGBA background */
+  background-color: rgba(25, 135, 84, 0.05);
+  text-align: center;
+}
+
+/* CSS Exercise 7: zebra striping */
+.gallery-table tbody tr:nth-child(even) td {
+  background-color: rgba(25, 135, 84, 0.1);
+}
+
+/* CSS Exercise 3: class .gallery-img */
+.gallery-img {
+  width: 190px;
+  height: 130px;
+  object-fit: cover;
+  /* CSS Exercise 4: HEX border color */
+  border: 3px solid #198754;
+  border-radius: 6px;
+  cursor: zoom-in;
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.2s ease;
+}
+
+.gallery-img:hover {
+  transform: scale(1.04);
+}
+
+/* Lightbox */
+#lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.82);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  cursor: zoom-out;
+}
+
+#lightbox.open {
+  display: flex;
+}
+
+#lightbox img {
+  max-width: 88vw;
+  max-height: 82vh;
+  border-radius: 8px;
+  border: 3px solid white;
+}
+
+
+/* ============================================================
+   Registration Form
+   CSS Exercise 8: outline on focused fields
+   ============================================================ */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 480px;
+}
+
+input, select, textarea {
+  padding: 10px 12px;
+  border: 1px solid #c3e6cb;
+  border-radius: 5px;
+  font-size: 14px;
+  font-family: 'Poppins', Arial, sans-serif;
+  background: white;
+  color: #222;
+}
+
+/* CSS Exercise 8: outline on focused fields */
+input:focus, select:focus, textarea:focus {
+  outline: 2px solid #198754;
+  outline-offset: 2px;
+  border-color: #198754;
+}
+
+/* CSS Exercise 8: compare visibility */
+.err {
+  display: block;
+  font-size: 12px;
+  color: #dc3545;
+  min-height: 14px;
+}
+
+#feeDisplay {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0a5c30;
+}
+
+.char-info {
+  font-size: 13px;
+  color: #555;
+}
+
+/* CSS Exercise 2: CTA button rule */
+form button[type="submit"] {
+  background-color: #198754;
+  color: white;
+  border: none;
+  padding: 11px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+}
+
+form button[type="submit"]:hover { background: #157347; }
+
+button {
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 5px;
+  border: 1px solid #198754;
+  background: white;
+  color: #198754;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 13px;
+}
+
+button:hover {
+  background: #198754;
+  color: white;
+}
+
+output#output {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #198754;
+  min-height: 20px;
+  margin-top: 4px;
+}
+
+
+/* ============================================================
+   Video
+   ============================================================ */
+
+.video-wrap {
+  max-width: 640px;
+  background: #111;
+  border-radius: 8px;
+  overflow: hidden;
+  padding-bottom: 4px;
+}
+
+.video-wrap video {
+  display: block;
+  width: 100%;
+}
+
+#videoStatus {
+  color: #198754;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 6px 10px;
+}
+
+
+/* ============================================================
+   Geolocation
+   ============================================================ */
+
+#geo p { margin-bottom: 12px; color: #555; font-size: 14px; }
+#locationResult { margin-top: 12px; font-size: 14px; font-weight: 600; color: #198754; }
+
+
+/* ============================================================
+   Admin Table - CSS Exercise 7
+   ============================================================ */
+
+.admin-table {
+  width: 100%;
+  max-width: 800px;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.admin-table th {
+  background: #198754;
+  color: white;
+  padding: 10px 14px;
+  text-align: center;
+  border: 1px solid #157347;
+}
+
+.admin-table td {
+  padding: 9px 14px;
+  border: 1px solid #c3e6cb;
+  text-align: center;
+  background: white;
+}
+
+/* Zebra striping */
+.admin-table tbody tr:nth-child(even) td {
+  background: #d4edda;
+}
+
+.admin-table tbody tr:hover td {
+  background: #c3e6cb;
+}
+
+
+/* ============================================================
+   Community Bulletin - CSS Exercise 9: Multi-column
+   ============================================================ */
+
+.bulletin-wrap {
+  background: white;
+  border: 1px solid #c3e6cb;
+  border-radius: 8px;
+  padding: 20px 24px;
+  margin-top: 20px;
+}
+
+.bulletin-wrap h3 {
+  color: #198754;
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.bulletin {
+  column-count: 2;
+  column-gap: 30px;
+  column-rule: 1px solid #c3e6cb;
+  font-size: 14px;
+  text-align: justify;
+  line-height: 1.8;
+  color: #444;
+}
+
+
+/* ============================================================
+   Footer
+   ============================================================ */
+
+footer {
+  text-align: center;
+  background: #222;
+  color: white;
+  padding: 16px;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+
+/* ============================================================
+   CSS Exercise 10: Media Queries - Responsive
+   ============================================================ */
+
+@media (max-width: 768px) {
+
+  /* Stack nav vertically */
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  /* Reduce heading */
+  #mainHeader { font-size: 18px; }
+
+  /* Stack event cards */
+  #eventContainer { flex-direction: column; }
+  .eventCard { width: 100%; }
+
+  /* Smaller gallery images */
+  .gallery-img { width: 100%; height: 100px; }
+
+  /* Single column bulletin */
+  .bulletin { column-count: 1; }
+
+  /* Full-width form */
+  form { max-width: 100%; }
+
+  .admin-table { font-size: 12px; }
+  .admin-table th, .admin-table td { padding: 6px 8px; }
+
+  .video-wrap { max-width: 100%; }
+}
